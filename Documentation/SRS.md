@@ -140,8 +140,7 @@ This section provides a requirement overview of the system. Various functional m
 - Online PETWellnessHub portal will be secure from malicious attacks.
 - The database should scale efficiently as the user base and data volume grow.
 - Online PETWellnessHub portal will always be kept updated with the latest antivirus software.
-- Business data will be backed up periodically to ensure the safety of data using an incremental backup strategy.
-- Role-based security will be applied for Application data and operations accessibility.
+- Role-based security will be applied for Web based Application data and operations accessibility.
 
 ## Benefits
 
