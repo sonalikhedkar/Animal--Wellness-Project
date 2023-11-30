@@ -120,7 +120,7 @@ This section provides a requirement overview of the system. Various functional m
 ### Portability
 
 - The system will provide a portable User Interface (HTML, CSS, JS) through which users will be able to access the online PETWellnessHub portal.
-- The system can be deployed to a single server, multi-server, to any OS, Cloud (Azure or AWS or GCP).
+- It uses databases that are easily portable across different systems to ensure smooth data migration.
 
 ### Accessibility
 
