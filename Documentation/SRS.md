@@ -104,6 +104,7 @@ This section provides a requirement overview of the system. Various functional m
 
 - The system has ability to accommodate a large number of users at once.
 - The site's response time should be as quick as feasible, and it should be able to load balance the server.
+- It ensures that data remains accurate and consistent throughout all transactions.
 
 ### Availability
 
