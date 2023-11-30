@@ -1,13 +1,13 @@
-# E-Krushi Seva
+# E-Krushi Sev
 
 **Document**: System Requirement Specification Document
 
-**Title**: E-KRUSHI SEVA
+**Title**: PETWellnessHub
 
 
 
 **Objective**:
-- This application is  to help farmers. It helps them identify and solve plant problems. Farmers can also easily buy the things they need for farming, making their work easier and more successful. It's all about making farming better and more productive for them.
+- This application is  to help pet lovers. It helps them to search for the desired pet, buy and sell them as well as adopt them. Pet Lovers can also easily buy the things they need for grooming, nourishing their pet easier and proper. It's all about making the pet lovers get all the required facilities faster and easier.
 
 
 
