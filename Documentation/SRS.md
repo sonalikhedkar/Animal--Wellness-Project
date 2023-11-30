@@ -97,7 +97,7 @@ This section provides a requirement overview of the system. Various functional m
 ### Security
 
 - Registered user will be allowed to place an order.
-- Sensitive data will always be transmitted with encryption. The system will internally maintain a secure communication channel between servers (web servers, application servers, database servers).
+- It will implement secure communication channels to protect sensitive information such as user credentials and payment details.
 
 ### Reliability
 
