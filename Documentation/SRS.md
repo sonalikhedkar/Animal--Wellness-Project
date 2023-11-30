@@ -115,7 +115,6 @@ This section provides a requirement overview of the system. Various functional m
 - The codebase should be well-documented and modular,making it easy for developers to understaand,update and maintain.
 - A Commercial database software will be used to maintain System data Persistence.
 - A readymade Web Server will be installed to host online shopping portal (Web Site) to management server capabilities.
-- IT operations team will easily monitor and configure the system using Administrative tools provided by Servers.
 - Separate environments will be maintained for the system for isolation in production, testing, and development.
 
 ### Portability
