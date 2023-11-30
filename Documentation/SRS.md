@@ -133,7 +133,7 @@ This section provides a requirement overview of the system. Various functional m
 
 ### Safety
 
-- The certified delivery partner should not damage the farm products or tamper with the package.
+- The certified delivery partner should not damage the pet products or carefully deliver the pets.
 
 ### Scalability
 
