@@ -124,7 +124,7 @@ This section provides a requirement overview of the system. Various functional m
 
 ### Accessibility
 
-- After authentication, only logged-in users will be able to place an order.
+- After authentication, only registered users will be able to place an order.
 - Through a personalized dashboard, the BOD team will be able to monitor daily, weekly, monthly, and annual business growth.
 
 ### Efficiency
