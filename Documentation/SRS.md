@@ -102,7 +102,7 @@ This section provides a requirement overview of the system. Various functional m
 
 ### Reliability
 
-- The system should be scalable, with the ability to accommodate a large number of users at once.
+- The system should be ability to accommodate a large number of users at once.
 - The site's response time should be as quick as feasible, and it should be able to load balance the server.
 
 ### Availability
