@@ -107,7 +107,7 @@ This section provides a requirement overview of the system. Various functional m
 
 ### Availability
 
-- This application is available for 24 hrs anywhere, anytime.
+- The system should be available for use 24/7, with minimal downtime for maintenance.
 
 ### Maintainability
 
