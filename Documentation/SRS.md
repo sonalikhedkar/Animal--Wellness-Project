@@ -98,6 +98,7 @@ This section provides a requirement overview of the system. Various functional m
 
 - Registered user will be allowed to place an order.
 - It will implement secure communication channels to protect sensitive information such as user credentials and payment details.
+- Authentication and Authorization: Implement secure login procedures and role-based access control to protect user accounts and data from unauthorized access.
 
 ### Reliability
 
