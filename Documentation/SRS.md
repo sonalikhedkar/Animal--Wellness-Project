@@ -125,7 +125,7 @@ This section provides a requirement overview of the system. Various functional m
 ### Accessibility
 
 - After authentication, only registered users will be able to place an order.
-- Anyone can go through website search for pets and products.
+- Anyone can go through website and search for pets and products.
 
 ### Efficiency
 
