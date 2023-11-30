@@ -120,7 +120,7 @@ This section provides a requirement overview of the system. Various functional m
 ### Portability
 
 - PDA: Portable Device Application
-- The system will provide a portable User Interface (HTML, CSS, JS) through which users will be able to access the online E-Krushi portal.
+- The system will provide a portable User Interface (HTML, CSS, JS) through which users will be able to access the online PETWellnessHub portal.
 - The system can be deployed to a single server, multi-server, to any OS, Cloud (Azure or AWS or GCP).
 
 ### Accessibility
