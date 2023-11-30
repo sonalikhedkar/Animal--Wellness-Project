@@ -90,8 +90,10 @@ This section provides a requirement overview of the system. Various functional m
 
 ### Performance
 
-- The server must be able to support an unlimited number of devices, i.e., it must place no restrictions on the number of gadgets that can be used simultaneously.
+- The server must be able to support an unlimited number of devices.
+- Response time: The system should respond within a certain time frame (e.g., less than 3 seconds) to user actions like browsing pets or making a purchase.
 - A limitless amount of active client payments must be supported by the server, and payments must never be lost.
+- 
 
 ### Security
 
