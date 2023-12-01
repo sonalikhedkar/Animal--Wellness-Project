@@ -7,84 +7,66 @@
 
 
 **Objective**:
-- This application is  to help pet lovers. It helps them to search for the desired pet, buy and sell them as well as adopt them. Pet Lovers can also easily buy the things they need for grooming, nourishing their pet easier and proper. It's all about making the pet lovers get all the required facilities faster and easier.
+- The Pet Wellness Hub project aims to create a comprehensive platform that supports pet owners in managing the health, well-being, and overall care of their pets. It seeks to provide a centralized and user-friendly space for accessing essential pet-related services, information, and community support.
 
 
 
 
 **Scope**:
-- The ordering process will be made simpler and more effective for farmers.
-- The farmers will be able to examine their order history and may cancel their order. This service will only be accessible in India.
+- The scope of a Pet Wellness Hub is broad, covering various features and services aimed at promoting the health and well-being of pets while providing convenience and support to pet owners.
 
 ## Overview
 
+- A Pet Wellness Hub would generally refer to a centralized platform or service dedicated to enhancing the health, care, and overall well-being of pets. Such a hub might encompass various features and services aimed at supporting pet owners in managing their pets' health, connecting with veterinary services, accessing trainers, grooming products and more.
 - Anyone can use the portal and browse the available products, but in order to make a purchase or place an order, a user needs to log in using their unique email and password. By visiting the registration page, unregistered members can do so. The default role is "User" when a user registers with the website.
 - This proposed system can be used by any naïve users and does not require any educational level, experience, or technical expertise in the computer field. However, it will be of good use if the user has good knowledge of how to operate a computer.
+
 
 ## Functional Requirement
 
 This section provides a requirement overview of the system. Various functional modules that can be implemented by the system will be:
 
-- This system will be accessible for the customers, shop owners,  suppliers, shippers and SubjectMatterExperts.
+This system will be accessible for the user, buyer, seller, Trainer and subject Matter experts.
 
-- The users will be accessible for viewing their personal data.
+###	User Registration and Authentication:
+- Users should be able to create accounts with personal information.
+- Secure login authentication to protect user data.
 
-- **Registration**: New users can sign up by creating an email ID and password. Registered customers will be able to get help from Subject Matter Experts for crop, soil, and weather-related problems.
-- **Login**: Only registered customers can log into the system. customers must have a valid login email ID and password to enter the site.
-- **View and edit Own Details**: Can view/edit their personal details, payment details, and details about services provided.
-- **Giving Feedback to Customer Care**: Can give feedback to the 24X7 Care Service.
-- **Logout**: Farmer must log out of the site after purchasing products.
+###	User Profiles:
+- Ability to create and manage profiles for pets and owners.
+- Include information such as pet breed, age, medical history, and owner contact details.
 
+###	Dashboard:
+- A personalized dashboard for each user displaying relevant information.
+- Notifications for upcoming vet appointments, vaccination reminders, and wellness tips.
 
-### Farmer
-- **Choosing and comparing products**: Can view all available products, compare them, and make a choice for purchasing products. Farmers can browse catalogs and choose products. The products chosen can go in the shopping cart. The farmer will be able to add or remove products from the shopping cart. Shopping cart contents will show up as an order when you go through the checkout procedure.
-- **Purchasing**: Can purchase any product through a valid account. Online and cash payment is also available for farmers.
+###	Pet Health Records:
+- An organized repository for storing and updating pet health records.
+- Integration with veterinary systems for automated updates.
 
-- **Tracking Order**: Farmer  may need the ability to track Order. So he can track Order.
+###	Appointment Scheduling:
+- A calendar feature for scheduling and managing vet appointments.
+- Notifications for upcoming appointments and follow-ups.
 
+###	Wellness Tips and Articles:
+- A section providing educational content on pet health, nutrition, and well-being.
+- Regularly updated articles and tips for pet owners.
 
+###	Emergency Information:
+- A section for storing emergency contact details and vet information.
+- Quick access to poison control hotline numbers.
 
-### Shop Owner
-- The Shop Owner plays a pivotal Role . They are responsible for operating and managing a local agricultural supply shop.
+###	Security and Privacy:
+- Robust security measures to protect user data and privacy.
+- Compliance with data protection regulations.
 
+###	Search and Filter Options:
+- Easy search and filter options for finding vet clinics, pet services, and products.
+- Location-based search for nearby pet-related businesses.
 
-- **Order Processing**: shop-owner should be able to view and process orders, including verifying order details, selecting products for shipping, and generating shipping labels.
-
-- **Tracking Order**: shop-owner may need the ability to track Order.
-
-
-### Shipper
-- The Shipper is a user role within the system responsible for handling the shipment and delivery of products to customers.
-
-
-**Packaging and Shipment Preparation**: Shippers are tasked with packaging orders securely, selecting appropriate shipping materials, and labeling packages with shipping information. This may also involve calculating shipping costs and selecting suitable shipping methods based on customer preferences and shipping destination.
-
-**Tracking Orders**: Shippers need the ability to track the status of customer orders, including marking them as shipped and providing tracking information to customers. This allows customers to monitor the progress of their orders.
-
-**Communication**: Shippers may need to communicate with customers or other team members regarding order-related issues, inquiries, or changes to shipping details. Effective communication ensures a smooth and satisfactory customer experience.
-
-### Supplier
-
-**Product Management**:
-
-- Suppliers should be able to add new products to their catalog, including product descriptions, pricing, and availability status.
-- They must be able to update product information and mark products as out of stock.
-- The system should support bulk product uploads for efficiency.
-
-**Pricing and Discounts**:
-- Suppliers should be able to set and adjust product prices.
-- They may offer discounts or promotions and should be able to configure these within the system.
-
-### Subject-Matter-Expert
-- **Farmer Problems and Solution**:Subject Matter Expert can check the problems of the farmers. Agri-doctors help the farmers to solve their questions related to farming.
-- They also give proper advice for precision farming to the farmers.
-- With the help of our software, farmers can ask their queries to theSubject Matter Expert.
-### Visitors
-- **Visiting the Site**: Can only visit the site withouAdvicet registration.
-
-### Customer Care
-- **Getting Feedback from the Customers**: Responsible for receiving complaints, queries, and feedback from the customers.
-- **Providing Solutions to Customers**: Provide feasible solutions to the customers on their complaints and queries.
+###	Customer Care
+- Getting Feedback from the Customers: Responsible for receiving complaints, queries, and feedback from the customers.
+- Providing Solutions to Customers: Provide feasible solutions to the customers on their complaints and queries
 
 ## Non-functional Requirement
 
