@@ -1,4 +1,4 @@
-# E-Krushi Sev
+# PETWellnessHub
 
 **Document**: System Requirement Specification Document
 
