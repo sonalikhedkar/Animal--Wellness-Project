@@ -126,6 +126,8 @@ This system will be accessible for the user, buyer, seller, Trainer and subject 
 
 ## Benefits
 
-- The farmers save time because they are not going to the shop.
-- The farmers can order products at the proper time.
-- The farmer can order products anytime, anywhere.
+- Improved pet health management for owners.
+- Enhanced connectivity and support within the pet owner community.
+- Convenient access to essential pet-related services and information.
+- Integration of modern technologies for real-time monitoring and communication.
+
