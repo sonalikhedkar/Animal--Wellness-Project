@@ -37,19 +37,17 @@ This system will be accessible for the user, buyer, seller, Trainer and subject 
 ###	Dashboard:
 - A personalized dashboard for each user displaying relevant information.
 - Notifications for selling and buying the animals, variety of grooming products, 
- upcoming vet appointments, vaccination reminders, and wellness tips.
-
-###	Pet Health Records:
-- An organized repository for storing and updating pet health records.
-- Integration with veterinary systems for automated updates.
+ upcoming vet appointments, vaccination reminders, available trainer and wellness tips.
 
 ###	Appointment Scheduling:
-- A calendar feature for scheduling and managing vet appointments.
+- User can schedule and manage vet appointments.
+- User can also schedule and manage trainer for the pets.
 - Notifications for upcoming appointments and follow-ups.
 
-###	Wellness Tips and Articles:
-- A section providing educational content on pet health, nutrition, and well-being.
-- Regularly updated articles and tips for pet owners.
+## Payment Gateway
+- System will allow all the payment methods that users can choose to pay for their purchase regarding pets and products.
+- System  would focus on providing a wide range of convenient and secure payment options, such as cash, credit/debit cards, mobile payments, and digital wallets.
+- The system should also allow users to choose their preferred payment method and provide them with real-time receipts and notifications. 
 
 ###	Emergency Information:
 - A section for storing emergency contact details and vet information.
@@ -61,7 +59,7 @@ This system will be accessible for the user, buyer, seller, Trainer and subject 
 
 ###	Search and Filter Options:
 - Easy search and filter options for finding vet clinics, pet services, and products.
-- Location-based search for nearby pet-related businesses.
+- User can easily search for availability of pets for buying, selling as well as for adoption.
 
 ###	Customer Care
 - Getting Feedback from the Customers: Responsible for receiving complaints, queries, and feedback from the customers.
@@ -72,7 +70,7 @@ This system will be accessible for the user, buyer, seller, Trainer and subject 
 ### Performance
 
 - The server must be able to support an unlimited number of devices.
-- Response time: The system should respond within a certain time frame (e.g., less than 3 seconds) to user actions like browsing pets or making a purchase.
+- Response time: The system should respond within a certain time frame (e.g., less than 4 seconds) to user actions like browsing pets or making a purchase.
 - A limitless amount of active client payments must be supported by the server, and payments must never be lost.
   
 ### Security
