@@ -7,19 +7,17 @@
 
 
 **Objective**:
-- The Pet Wellness Hub project aims to create a comprehensive platform that supports pet owners in managing the health, well-being, and overall care of their pets. It seeks to provide a centralized and user-friendly space for accessing essential pet-related services, information, and community support.
-
+- The Pet Wellness Hub project aims to create a comprehensive platform that provides a centralized and user-friendly space for accessing essential pet-related services, information, and community support. It supports pet owners in managing the health, well-being, and overall care of their pets. 
 
 
 
 **Scope**:
-- The scope of a Pet Wellness Hub is broad, covering various features and services aimed at promoting the health and well-being of pets while providing convenience and support to pet owners.
+- The scope of a Pet Wellness Hub is broad, covering various features and services aimed at promoting the health, well-being, buying and selling of pets while providing convenience and support to pet owners.
 
 ## Overview
 
-- A Pet Wellness Hub would generally refer to a centralized platform or service dedicated to enhancing the health, care, and overall well-being of pets. Such a hub might encompass various features and services aimed at supporting pet owners in managing their pets' health, connecting with veterinary services, accessing trainers, grooming products and more.
+- A Pet Wellness Hub would generally refer to a centralized platform or service dedicated to enhancing the health, care, and overall well-being of pets. Such a hub might encompass various features and services aimed at supporting pet owners in managing their pets' health, buying snd selling the pets, connecting with veterinary services, accessing trainers, grooming products and more.
 - Anyone can use the portal and browse the available products, but in order to make a purchase or place an order, a user needs to log in using their unique email and password. By visiting the registration page, unregistered members can do so. The default role is "User" when a user registers with the website.
-- This proposed system can be used by any naïve users and does not require any educational level, experience, or technical expertise in the computer field. However, it will be of good use if the user has good knowledge of how to operate a computer.
 
 
 ## Functional Requirement
@@ -29,16 +27,17 @@ This section provides a requirement overview of the system. Various functional m
 This system will be accessible for the user, buyer, seller, Trainer and subject Matter experts.
 
 ###	User Registration and Authentication:
-- Users should be able to create accounts with personal information.
+- Users should be able to create accounts with their personal information.
 - Secure login authentication to protect user data.
 
 ###	User Profiles:
 - Ability to create and manage profiles for pets and owners.
-- Include information such as pet breed, age, medical history, and owner contact details.
+- Include information such as pet breed, age, medical history(Pet License Included), and owner contact details.
 
 ###	Dashboard:
 - A personalized dashboard for each user displaying relevant information.
-- Notifications for upcoming vet appointments, vaccination reminders, and wellness tips.
+- Notifications for selling and buying the animals, variety of grooming products, 
+ upcoming vet appointments, vaccination reminders, and wellness tips.
 
 ###	Pet Health Records:
 - An organized repository for storing and updating pet health records.
