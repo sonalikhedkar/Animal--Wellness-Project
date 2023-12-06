@@ -72,6 +72,7 @@ This system will be accessible for the user, buyer, seller, Trainer and subject 
 
 - The server must be able to support an unlimited number of devices.
 - Response time: The system should respond within a certain time frame (e.g., less than 4 seconds) to user actions like browsing pets or making a purchase.
+- Smooth and easy handling of website.
 - A limitless amount of active client payments must be supported by the server, and payments must never be lost.
   
 ### Security
