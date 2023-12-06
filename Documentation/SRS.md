@@ -35,9 +35,10 @@ This system will be accessible for the user, buyer, seller, Trainer and subject 
 - Include information such as pet breed, age, medical history(Pet License Included), and owner contact details.
 
 ###	Dashboard:
-- A personalized dashboard for each user displaying relevant information.
-- Notifications for selling and buying the animals, variety of grooming products, 
- upcoming vet appointments, vaccination reminders, available trainer and wellness tips.
+- A personalized dashboard for each user displaying relevant information and also for editing user profile.
+- To display variety of food products, grooming products available.
+- Notifications for selling, buying as well as adopting the animals, upcoming vet appointments,
+  vaccination reminders, available trainer and wellness tips.
 
 ###	Appointment Scheduling:
 - User can schedule and manage vet appointments.
