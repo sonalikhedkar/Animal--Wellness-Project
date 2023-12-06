@@ -44,7 +44,7 @@ This system will be accessible for the user, buyer, seller, Trainer and subject 
 - User can also schedule and manage trainer for the pets.
 - Notifications for upcoming appointments and follow-ups.
 
-## Payment Gateway
+###	Payment Gateway:
 - System will allow all the payment methods that users can choose to pay for their purchase regarding pets and products.
 - System  would focus on providing a wide range of convenient and secure payment options, such as cash, credit/debit cards, mobile payments, and digital wallets.
 - The system should also allow users to choose their preferred payment method and provide them with real-time receipts and notifications. 
