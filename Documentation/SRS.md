@@ -89,13 +89,13 @@ This system will be accessible for the user, buyer, seller, Trainer and subject 
 
 ### Availability
 
-- The system should be available for use 24/7, with minimal downtime for maintenance.
+- The system should be available for user 24/7, with minimal downtime for maintenance.
 
 ### Maintainability
 
 - The codebase should be well-documented and modular,making it easy for developers to understaand,update and maintain.
 - A Commercial database software will be used to maintain System data Persistence.
-- A readymade Web Server will be installed to host online shopping portal (Web Site) to management server capabilities.
+- A readymade Web Server will be installed to host online Web Site to manage server capabilities.
 - Separate environments will be maintained for the system for isolation in production, testing, and development.
 
 ### Portability
