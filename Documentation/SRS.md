@@ -37,11 +37,11 @@ This system will be accessible for the user, buyer, seller, Trainer and subject 
 ###	Dashboard:
 - A personalized dashboard for each user displaying relevant information and also for editing user profile.
 - To display variety of food products, grooming products available.
-- Notifications for selling, buying as well as adopting the animals, upcoming vet appointments,
+- Notifications for selling, buying as well as adopting the animals, upcoming pet appointments,
   vaccination reminders, available trainer and wellness tips.
 
 ###	Appointment Scheduling:
-- User can schedule and manage vet appointments.
+- User can schedule and manage pet appointments.
 - User can also schedule and manage trainer for the pets.
 - Notifications for upcoming appointments and follow-ups.
 
