@@ -6,6 +6,7 @@ import Chair from "./Food";
 import Home from "./Home";
 import Sofa from "./Clothes";
 import Table from "./ProductDetail";
+import License from "./License";
 
 function NavBar() {
   let loginData = localStorage.getItem("loginDetails")
@@ -22,10 +23,10 @@ function NavBar() {
 
   return (
     <div>
-      <nav className="navbar navbar-expand-lg bg-primary sticky-top ">
+      <nav className="navbar navbar-expand-lg bg-info sticky-top ">
         <div className="container-fluid ">
           <Link className="navbar-brand text-dark display-6" to="/">
-            nav Peteria
+            <b><i>PetHub</i></b>
           </Link>
           <button
             className="navbar-toggler "
@@ -54,6 +55,11 @@ function NavBar() {
                   About
                 </Link>
               </li>
+              <li className="nav-item">
+                <Link className="nav-link text-dark" to="/License">
+                License
+                </Link>
+              </li>
               <li className="nav-item ">
                
               <Link className="nav-link text-dark" to="/products">
@@ -79,7 +85,9 @@ function NavBar() {
                 <Link className="dropdown-item" to="/vet">
                   Veternary
                 </Link>
-
+                <Link className="dropdown-item" to="/trainer">
+                  Trainer
+                </Link>
             
                 </ul>
               </li>
@@ -158,7 +166,7 @@ MyOrders
                 className="nav-link text-dark btn btn-sm btn-light me-2"
                 to="/admin/edit-user"
               >
-                Edit Profile
+               Profile
               </Link>
 
             )

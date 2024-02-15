@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import NavBar from "./Component/customer/NavBar"
 import Home from "./Component/customer/Home";
 import About from "./Component/customer/About";
+import License from "./Component/customer/License";
 import Cart from "./Component/customer/Cart";
 import Register from "./Component/customer/Register";
 import Login from "./Component/customer/Login";
@@ -63,6 +64,7 @@ function App() {
         <Switch>
           <Route path="/" component={Home} exact></Route>
           <Route path="/About" component={About}></Route>
+          <Route path="/License" component={License}></Route>
           <Route path="/Cart" component={Cart}></Route>
           <Route path="/Register" component={Register}></Route>
           <Route path="/Logout" component={Logout}></Route>
