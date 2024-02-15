@@ -1,0 +1,40 @@
+package com.app.entities;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "tblTrainer")
+public class Trainer extends BaseEntity{
+   
+    @Column(length = 20 , nullable = false)
+	private String firstName ;
+    
+    @Column(length = 20 , nullable = false)
+	private String lastName ;
+	
+	@Column(length = 20 , nullable = true)
+	 private String gender;
+	
+	@Column(nullable = false , unique = true)
+	private String email ;
+	
+	@Column(length = 13)
+	private String mobileNum;
+	
+	
+	@Column(nullable =  false)
+	private boolean isActive  ;
+	
+	private int Experience;
+	
+    private double fees;
+
+	@Column(nullable =  false)
+	private String address ;
+
+
+}
