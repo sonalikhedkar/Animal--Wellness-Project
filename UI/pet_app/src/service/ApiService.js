@@ -18,6 +18,10 @@ class ApiService {
   {
     return axios.get(USER_API_BASE_URL + "/vet/vets");
   }
+  fetchTrainers()
+  {
+    return axios.get(USER_API_BASE_URL + "/trainers");
+  }
 
   fetchProductById(productId) {
     return axios.get(USER_API_BASE_URL + "/" + productId);

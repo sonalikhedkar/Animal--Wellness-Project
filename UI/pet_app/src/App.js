@@ -46,6 +46,7 @@ import HostelDetail from "./Component/customer/HostelDetails";
 import Products from "./Component/customer/Products";
 import BreedDetail from "./Component/customer/BreedDetails";
 import VeterinaryDetail from "./Component/customer/VeterinaryDetails";
+import Trainers from "./Component/customer/ListTrainer";
 
 
 function App() {
@@ -83,6 +84,7 @@ function App() {
           <Route path="/vet" component={Vet}></Route>
           <Route path="/veterinarydetails"component={VeterinaryDetail}></Route>
           <Route path="/products" component={Products}></Route>
+          <Route path="/trainers" component={Trainers}></Route>
         
 
           <Route path="/admin/dashboard" component={ListAllUser}></Route>
