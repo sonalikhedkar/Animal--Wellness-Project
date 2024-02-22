@@ -247,7 +247,7 @@ class AddProduct extends Component {
                   onChange={this.onValueChange}
                 />
                 <label class="form-check-label" for="i2">
-                  Clothes
+                  Grooming Products
                 </label>
               </div>
 

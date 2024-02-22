@@ -57,6 +57,10 @@ class ApiService {
   addVet(vet) {
     return axios.post("http://localhost:8080/vet/vet-add", vet);
   }
+  
+  addTrainer(trainer) {
+    return axios.post("http://localhost:8080/trainer/trainer-add", trainer);
+  }
 
   addBreed(breed) {
     return axios.post("http://localhost:8080/breed/breed-add", breed);
@@ -69,9 +73,16 @@ class ApiService {
   editProduct(product) {
     return axios.put(USER_API_BASE_URL + "/product/" + product.id, product);
   }
-
+ 
   deleteProduct(productId) {
     return axios.delete(USER_API_BASE_URL + "/product/" + productId);
+
+  }
+  addFeedback(details){
+    return axios.post(USER_API_BASE_URL + "/feedback-add", details);
+  }
+  fetchAllCustomers(){
+    return axios.get(USER_API_BASE_URL + "/customers");
   }
 }
 

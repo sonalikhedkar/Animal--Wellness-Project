@@ -102,7 +102,7 @@ function NavBar() {
                 <Link className="dropdown-item" to="/vet">
                   Veternary
                 </Link>
-                <Link className="dropdown-item" to="/trainer">
+                <Link className="dropdown-item" to="/trainers">
                   Trainer
                 </Link>
             
@@ -115,7 +115,7 @@ function NavBar() {
                     className="nav-link text-dark   me-2"
                     to="/Cart"
                   >
-                    Cart
+                      Product Cart
                   </Link>
                 </li>
               )
@@ -126,6 +126,45 @@ function NavBar() {
                 )
               }
 
+           {/* {loginData ? (
+                <li>
+                  <Link
+                    className="nav-link text-dark   me-2"
+                    to="/PetCart"
+                  >
+                    Pet Cart
+                  </Link>
+                </li>
+              )
+                : (
+                  <li>
+
+                  </li>
+                )
+              } */}
+              
+              {loginData ? (
+                <li>
+                  <Link
+                    className="nav-link text-dark   me-2"
+                    to="/feedback"
+                  >
+                    FeedBack
+                  </Link>
+                </li>
+              )
+                : (
+                  <li>
+
+                  </li>
+                )
+              }
+              
+              <li className="nav-item ">
+                  <Link className="nav-link text-dark" to="/feedbacklist">
+                    App FeedBack
+                  </Link>
+               </li>
               {/* {loginData ? (
                 <li>
                   <Link

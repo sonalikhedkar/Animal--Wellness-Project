@@ -5,72 +5,94 @@ class AddTrainer extends Component{
     constructor(props) {
         super(props);
         this.state = {
-            id: "",
+            id:"",
             firstname: "",
             lastname:"",
-            gender:"",
-            experience:" ",
+            experience:"",
             fees:"",
             contact:"",
-            Address:"",
+            address:"",
+            email:"",
             message: null,
             message: "",
             formErrors: {},
         };
-        this.saveProduct = this.saveProduct.bind(this);
+        this.saveTrainer = this.saveTrainer.bind(this);
 
-}
-nChange = (e) => this.setState({ [e.target.name]: e.target.value });
+      }
+   onChange = (e) => this.setState({ [e.target.name]: e.target.value });
 
-  onValueChange = (event) =>
+   onValueChange = (event) =>
     this.setState({
       category: event.target.value,
     });
 
+
+
   handleFormValidation() {
-    const { name, description, price, imgUrl } = this.state;
+    const { firstname, lastname, experience, fees,contact,address,email} = this.state;
     let formErrors = {};
     let formIsValid = true;
-    if (!name) {
+    if (!firstname) {
       formIsValid = false;
-      formErrors["NameErr"] = "*Name is required.";
+      formErrors["firstnameErr"] = "*first Name is required.";
     }
-    if (!imgUrl) {
+    if (!lastname) {
       formIsValid = false;
-      formErrors["ImgErr"] = "*ImageUrl is required.";
+      formErrors["lastnameErr"] = "*Last Name is required.";
     }
-    if (!price) {
+    if (!email) {
       formIsValid = false;
-      formErrors["PriceErr"] = "*enter the price.";
-    } else if (!/^\d{0,8}[.]?\d{1,4}$/.test(price)) {
+      formErrors["emailIdErr"] = "*Email id is required.";
+    } else if (!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)) {
       formIsValid = false;
-      formErrors["PriceErr"] = "*InvalidPrice.";
+      formErrors["emailIdErr"] = "*Invalid email id.";
     }
-
-    if (!description) {
+    if (!experience) {
       formIsValid = false;
-      formErrors["DescErr"] = "*Description is required.";
+      formErrors["experienceErr"] = "*Experience is required.";
+    }
+    if (!fees) {
+      formIsValid = false;
+      formErrors["FeesErr"] = "*enter the price.";
+    } else if (!/^\d{0,8}[.]?\d{1,4}$/.test(fees)) {
+      formIsValid = false;
+      formErrors["FeesErr"] = "*InvalidPrice.";
+    }
+    if (!contact) {
+      formIsValid = false;
+      formErrors["contactErr"] = "*Phone number is required.";
+    } else {
+      var mobPattern = /^(?:(?:\\+|0{0,2})91(\s*[\\-]\s*)?|[0]?)?[789]\d{9}$/;
+      if (!mobPattern.test(contact)) {
+        formIsValid = false;
+        formErrors["contactErr"] = "*Invalid phone number.";
+      }
+    }
+    if (!address) {
+      formIsValid = false;
+      formErrors["AddErr"] = "*Description is required.";
     }
 
     this.setState({ formErrors: formErrors });
     return formIsValid;
   }
 
-  saveProduct = (e) => {
+  saveTrainer = (e) => {
     e.preventDefault();
     if (this.handleFormValidation()) {
-      let product = {
-        name: this.state.name,
-        description: this.state.description,
-        imgUrl: this.state.imgUrl,
-        price: this.state.price,
+      let trainer = {
+        firstname: this.state.firstname,
+        lastname: this.state.lastname,
+        fees: this.state.fees,
         address: this.state.address,
-        pincode: this.state.pincode,
         contact: this.state.contact,
+        experience:this.state.experience,
+        email:this.state.email
         
       };
 
-      ApiService.addTrainer(product)
+      ApiService.addTrainer(trainer)
         .then((resp) => {
           this.setState({ message: "Trainer added successfully." });
           this.setState({
@@ -98,8 +120,8 @@ nChange = (e) => this.setState({ [e.target.name]: e.target.value });
   };
 
 render() {
-    const { currentFile, progress, message, imageInfos } = this.state;
-    const { NameErr, DescErr, FeesErr, ImgErr } = this.state.formErrors;
+    const {  message } = this.state;
+    const { firstnameErr, lastnameErr, FeesErr, addressErr, contactErr, experienceErr,emailIdErr} = this.state.formErrors;
     return (
       <div 
       className="carousalimage7 d-flex justify-content-center"
@@ -124,20 +146,20 @@ render() {
                 </label>
                 <input
                   type="text"
-                  placeholder="first name"
+                  placeholder="firstname"
                   name="firstname"
                   className={
-                    NameErr ? "form-control showError" : "form-control"
+                    firstnameErr ? "form-control showError" : "form-control"
                   }
                   value={this.state.firstname}
                   onChange={this.onChange}
                 />
-                {NameErr && (
+                {firstnameErr && (
                   <div
                     className="text-start"
                     style={{ color: "red", fontSize: "12px" }}
                   >
-                    {NameErr}
+                    {firstnameErr}
                   </div>
                   
                 )}
@@ -150,47 +172,59 @@ render() {
                 </label>
                 <input
                   type="text"
-                  placeholder="last name"
+                  placeholder="lastname"
                   name="lastname"
                   className={
-                    NameErr ? "form-control showError" : "form-control"
+                    lastnameErr ? "form-control showError" : "form-control"
                   }
                   value={this.state.lastname}
                   onChange={this.onChange}
                 />
-                {NameErr && (
+                {lastnameErr && (
                   <div
                     className="text-start"
                     style={{ color: "red", fontSize: "12px" }}
                   >
-                    {NameErr}
+                    {lastnameErr}
                   </div>
                 )}
               </div>
 
               <div className="form-group">
                 <label>
-                  <span className="text-danger">*</span>Gender:
+                  <span className="text-danger">*</span>Email id:
                 </label>
-                <br></br>
-                <input type="radio" id="html" name="gender" value="Female"/>
-                 <label for="html">Female</label>
-                 <br></br>
-                 <input type="radio" id="css" name="gender" value="Male"/>
-                <label for="css">Male</label>
-                </div>
+                <input
+                  type="email"
+                  placeholder="email id"
+                  name="email"
+                  className={
+                    emailIdErr ? "form-control showError" : "form-control"
+                  }
+                  value={this.state.email}
+                  onChange={this.onChange}
+                />
+                {emailIdErr && (
+                  <div
+                    className="text-start"
+                    style={{ color: "red", fontSize: "12px" }}
+                  >
+                    {emailIdErr}
+                  </div>
+                )}
+              </div>
 
-<div className="row">
+              <div className="row">
                 <div className="form-group col-6">
                 <label htmlFor="timeInput">
                   <span className="text-danger">*</span>Experience:
                 </label>
                 <input
                   placeholder="Experience"
-                  type="year"
-                  name="Experience"
+                  type="number"
+                  name="experience"
                   className={
-                    DescErr ? "form-control showError" : "form-control"
+                    experienceErr ? "form-control showError" : "form-control"
                   }
                   value={this.state.experience}
                   onChange={this.onChange}
@@ -203,23 +237,24 @@ render() {
 
               <div className="form-group">
                 <label>
-                  <span className="text-danger">*</span>Description:
+                  <span className="text-danger">*</span>Fees:
                 </label>
                 <input
-                  placeholder="description"
-                  name="description"
+                type="number"
+                  placeholder="fees"
+                  name="fees"
                   className={
-                    DescErr ? "form-control showError" : "form-control"
+                    FeesErr ? "form-control showError" : "form-control"
                   }
-                  value={this.state.description}
+                  value={this.state.fees}
                   onChange={this.onChange}
                 />
-                {DescErr && (
+                {FeesErr && (
                   <div
                     className="text-start"
                     style={{ color: "red", fontSize: "12px" }}
                   >
-                    {DescErr}
+                    {FeesErr}
                   </div>
                 )}
               </div>
@@ -235,17 +270,17 @@ render() {
                   placeholder="address"
                   name="address"
                   className={
-                    DescErr ? "form-control showError" : "form-control"
+                    addressErr ? "form-control showError" : "form-control"
                   }
                   value={this.state.address}
                   onChange={this.onChange}
                 />
-                {DescErr && (
+                {addressErr && (
                   <div
                     className="text-start"
                     style={{ color: "red", fontSize: "12px" }}
                   >
-                    {DescErr}
+                    {addressErr}
                   </div>
                 )}
               </div>
@@ -256,10 +291,11 @@ render() {
                   <span className="text-danger">*</span>Contact:
                 </label>
                 <input
-                  placeholder="contact"
+                   type="mob"
+                   placeholder="contact"
                   name="contact"
                   className={
-                    DescErr ? "form-control showError" : "form-control"
+                    contactErr ? "form-control showError" : "form-control"
                   }
                   value={this.state.contact}
                   onChange={this.onChange}

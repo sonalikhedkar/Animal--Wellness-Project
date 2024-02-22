@@ -79,7 +79,7 @@ class ListAllHostels extends Component {
   render() {
     return (
       <>
-        <h1>Hostel List</h1>
+        <h1><i>Hostel List</i></h1>
         <div className="d-flex flex-wrap  justify-content-center align-items-center mt-4">
           {this.state.hostels.map((p1) => (
             <div

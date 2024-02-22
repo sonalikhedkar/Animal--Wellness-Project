@@ -6,6 +6,7 @@ import Home from "./Component/customer/Home";
 import About from "./Component/customer/About";
 import License from "./Component/customer/License";
 import Cart from "./Component/customer/Cart";
+import PetCart from "./Component/customer/PetCart";
 import Register from "./Component/customer/Register";
 import Login from "./Component/customer/Login";
 import Logout from "./Component/customer/Logout";
@@ -38,7 +39,7 @@ import Clothes from "./Component/customer/Clothes";
 import OtherProducts from "./Component/customer/OtherProducts";
 import AddVet from "./Component/provider/AddVet";
 import AddTrainer from "./Component/provider/AddTrainer";
-import ListTrainer from "./Component/customer/ListTrainer";
+import ListofAllTrainers from "./Component/customer/ListTrainer";
 import Hostel from "./Component/customer/Hostel";
 import Breed from "./Component/customer/Breed";
 
@@ -53,7 +54,10 @@ import HostelDetail from "./Component/customer/HostelDetails";
 import Products from "./Component/customer/Products";
 import BreedDetail from "./Component/customer/BreedDetails";
 import VeterinaryDetail from "./Component/customer/VeterinaryDetails";
+import ListAllTrainers from "./Component/customer/ListTrainer";
 
+import AppFeedbackForm from "./Component/customer/AppFeedback";
+import AppFeedbackList from "./Component/customer/AppFeedbackList";
 
 function App() {
   const [user, setuser] = useState(1);
@@ -73,6 +77,7 @@ function App() {
           <Route path="/About" component={About}></Route>
           <Route path="/License" component={License}></Route>
           <Route path="/Cart" component={Cart}></Route>
+          <Route path="/PetCart" component={PetCart}></Route>
           <Route path="/Register" component={Register}></Route>
           <Route path="/Logout" component={Logout}></Route>
           <Route path="/Login" component={Login}></Route>
@@ -89,6 +94,7 @@ function App() {
           <Route path="/breeddetails" component={BreedDetail}></Route>
           <Route path="/vet" component={Vet}></Route>
           <Route path="/veterinarydetails"component={VeterinaryDetail}></Route>
+          <Route path="/trainers"component={ListAllTrainers}></Route>
           
           <Route path="/products" component={Products}></Route>
         
@@ -117,6 +123,9 @@ function App() {
           <Route path="/provider/pet-add" component={AddPet}></Route>
           <Route path="/buypet" component={BuyPet}></Route>
           <Route path="/addpet" component={AddPetCust}></Route> 
+          <Route path="/feedback" component={AppFeedbackForm}></Route>
+          <Route path="/feedbacklist" component={AppFeedbackList}></Route>
+          
 
           <Route
             path="/user-forgot-password"

@@ -2,10 +2,6 @@ import React, { Component, useState, useEffect } from "react";
 import ApiService from "../../service/admin/ApiService";
 import Swal from "sweetalert2";
 
-
-
-
-
 class AddBreed extends Component {
     constructor(props) {
         super(props);
@@ -23,7 +19,7 @@ class AddBreed extends Component {
             message: "",
             formErrors: {},
         };
-        this.saveProduct = this.saveProduct.bind(this);
+        this.saveBreed = this.saveBreed.bind(this);
     }
     onChange = (e) => this.setState({ [e.target.name]: e.target.value });
 
@@ -82,10 +78,10 @@ class AddBreed extends Component {
         return formIsValid;
     }
 
-    saveProduct = (e) => {
+    saveBreed = (e) => {
         e.preventDefault();
         if (this.handleFormValidation()) {
-            let product = {
+            let breed = {
                 name: this.state.name,
                 type: this.state.type,
                 breed: this.state.breed,
@@ -96,7 +92,7 @@ class AddBreed extends Component {
                 imgUrl: this.state.imgUrl,
             };
 
-            ApiService.addBreed(product)
+            ApiService.addBreed(breed)
                 .then((resp) => {
                     this.setState({ message: "breed added successfully." });
                     this.setState({
@@ -300,7 +296,7 @@ class AddBreed extends Component {
                                     </div>
                                 )}
                             </div>
-                            <button className="btn btn-success mt-4" onClick={this.saveProduct}>
+                            <button className="btn btn-success mt-4" onClick={this.saveBreed}>
                                 Save
                             </button>
                         </div>

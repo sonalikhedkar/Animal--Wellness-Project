@@ -91,7 +91,7 @@ class ListAllVeterinary extends Component {
               <div
                 className="card mb-3 p-2 "
                 style={{
-                  height: "30rem",
+                  height: "35rem",
                   boxShadow:
                     " 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.404)",
                 }}
@@ -100,7 +100,7 @@ class ListAllVeterinary extends Component {
                   <img
                     className="card-img-top "
                     src={p1.imgUrl}
-                    style={{ width: "50px", height: "50px" }}
+                    style={{ width: "300px", height: "200px" }}
                     alt="Card image cap"
                   />
                 </div>

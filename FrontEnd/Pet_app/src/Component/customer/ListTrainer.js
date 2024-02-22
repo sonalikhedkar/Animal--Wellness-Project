@@ -5,20 +5,20 @@ import ApiService from "../../service/ApiService";
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 
-class ListTrainer extends Component {
+class ListAllTrainers extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      products: [],
+      hostels: [],
       message: "",
       role: "",
     };
   }
 
   componentDidMount() {
-    ApiService.fetchProducts().then((resp) => {
-      this.setState({ products: resp.data });
-      console.log(this.state.products);
+    ApiService.fetchTrainers().then((resp) => {
+      this.setState({ hostels: resp.data });
+      console.log(this.state.hostels);
     });
 
     
@@ -56,7 +56,7 @@ class ListTrainer extends Component {
             Swal.fire({
               position: "center",
               icon: "success",
-              title: "product added to your cart successfully...",
+              title: "Your appointmnet has been  successfully booked...",
               showConfirmButton: false,
               timer: 1500,
             });
@@ -79,34 +79,33 @@ class ListTrainer extends Component {
   render() {
     return (
       <>
-        
+        <h1><i>Trainers</i></h1>
         <div className="d-flex flex-wrap  justify-content-center align-items-center mt-4">
-          {this.state.products.map((p1) => (
+          {this.state.hostels.map((p1) => (
             <div
               className="container m-2"
               key={p1.id}
-              style={{ width: "16rem" }}
+              style={{ width: "25rem" }}
             >
               <div
                 className="card mb-3 p-2 "
                 style={{
-                  height: "26rem",
+                  height: "25rem",
                   boxShadow:
                     " 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.404)",
                 }}
               >
-                <div>
-                  <img
-                    className="card-img-top "
-                    src={p1.imgUrl}
-                    style={{ width: "200px", height: "250px" }}
-                    alt="Card image cap"
-                  />
-                </div>
+              
                 <div className="card-body">
-                  <h5 className="card-title">{p1.name}</h5>
-                  <p className="card-text"> Price: Rs.{p1.price}/-</p>
+                  <h5 className="card-tiltle"><b>{p1.firstName} {p1.lastName}</b></h5>
+                  <p className="card-text"> Fees: Rs.{p1.fees}/-</p>
+                  <p className="card-text"> Experience: {p1.experience}YEAR</p>
+                  <p className="card-text"> Email: {p1.email}</p>
+                  <p className="card-text"> Contact: {p1.mobileNum}</p>
+                  <p className="card-text"> Address: {p1.address}</p>
+                  
                   <div className="col-6"></div>
+                  
                   <hr />
 
                   <div className="row d-flex justify-content-around ">
@@ -118,21 +117,21 @@ class ListTrainer extends Component {
                           className="  btn btn-primary w-100"
                           onClick={() => this.addtocart(p1)}
                         >
-                          Add
+                          Book an Appointment
                         </button>
                       </div>
                     )}
-                    <div className="col-5" style={{ width: "50%" }}>
+                    {/* <div className="col-5" style={{ width: "50%" }}>
                       <Link
-                        className="btn  btn-primary w-100"
+                        className="btn  btn-primary w-100 "
                         to={{
-                          pathname: "/ProductDetail",
+                          pathname: "/hosteldetails",
                           state: { proId: p1.id },
                         }}
                       >
-                        View
+                        View hostel details
                       </Link>
-                    </div>
+                    </div> */}
                   </div>
                 </div>
               </div>
@@ -144,14 +143,6 @@ class ListTrainer extends Component {
     );
   }
 }
-export default ListTrainer;
+export default ListAllTrainers;
 
-{
-  /* <h3 className="m-4">New Arrivals</h3>
-        <div className="d-flex flex-wrap ">
-          <div className="d-flex flex-row flex-wrap bd-highlight mb-3 container bg-gray" >
-            
-            {list1}
-          </div>
-        </div> */
-}
+

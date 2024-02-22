@@ -98,7 +98,7 @@ class Products extends Component {
                   <img
                     className="card-img-top "
                     src={p1.imgUrl}
-                    style={{ width: "150px", height: "150px" }}
+                    style={{ width: "200px", height: "200px" }}
                     alt="Card image cap"
                   />
                 </div>

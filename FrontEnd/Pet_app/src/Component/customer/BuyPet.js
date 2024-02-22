@@ -42,17 +42,42 @@ class BuyPet extends Component {
     }, 800);
   }
 
-  buypet = () => {
+  
+  buypet = (b1) => {
+    let loginData = localStorage.getItem("loginDetails")
+      ? localStorage.getItem("loginDetails")
+      : null;
 
-    this.setState({ message: "Item Added to Cart !!!" });
+    if (loginData) {
+      loginData = JSON.parse(loginData);
+      if (loginData.id) {
+        let cartData = { customerId: loginData.id, breedId: b1.id };
+        ApiService.addPetToCardAPI(cartData)
+          .then((resp) => {
+            this.setState({ message: "Item Added to Cart !!!" });
             Swal.fire({
               position: "center",
               icon: "success",
-              title: "Thank You For Buying...",
+              title: "pet added to your cart successfully...",
               showConfirmButton: false,
               timer: 1500,
             });
+          })
+          .catch((err) => {
+            Swal.fire({
+              icon: "error",
+              title: "Oops...",
+              text: err.resp.data.message,
+              footer: '<a href="">Why do I have this issue?</a>',
+            });
+          });
+      }
+    } else {
+      alert("please login");
+      window.location.href = "/login";
+    }
   };
+
 
   render() {
     return (
@@ -60,10 +85,10 @@ class BuyPet extends Component {
 
         <h2><i>Pets Available for Sell</i></h2>
         <div className="d-flex flex-wrap  justify-content-center align-items-center mt-4">
-          {this.state.breed.map((p1) => (
+          {this.state.breed.map((b1) => (
             <div
               className="container m-2"
-              key={p1.id}
+              key={b1.id}
               style={{ width: "25rem" }}
             >
               <div
@@ -77,19 +102,20 @@ class BuyPet extends Component {
                 <div>
                   <img
                     className="card-img-top "
-                    src={p1.imgUrl}
+                    src={b1.imgUrl}
                     style={{ width: "200px", height: "200px" }}
                     alt="Card image cap"
                   />
                 </div>
                 <div className="card-body">
-                  <h5 className="card-title"><i>{p1.name}</i></h5>
-                  <p className="card-text"> <b>Type:</b>{p1.type}</p>
-                  <p className="card-text"> <b>Breed:</b>{p1.breed}</p>
-                  <p className="card-text"> <b>Gender:</b>{p1.gender}</p>
-                  <p className="card-text"> <b>Age:</b>{p1.age}</p>
-                  <p className="card-text"><b>Weight:</b> {p1.weight}</p>
-                  <p className="card-text"><b>Description:</b> {p1.description}</p>
+                  <h5 className="card-title"><i>{b1.name}</i></h5>
+                  <p className="card-text"> <b>Type:</b>{b1.type}</p>
+                  <p className="card-text"> <b>Breed:</b>{b1.breed}</p>
+                  <p className="card-text"> <b>Gender:</b>{b1.gender}</p>
+                  <p className="card-text"> <b>Age:</b>{b1.age}</p>
+                  <p className="card-text"><b>Weight:</b> {b1.weight}</p>
+                  <p className="card-text"><b>Description:</b> {b1.description}</p>
+                  <p className="card-text"><b>Price:</b> {b1.price}</p>
                   
                   <div className="col-10"></div>
                   <hr />
@@ -101,7 +127,7 @@ class BuyPet extends Component {
                       <div className="col-5" style={{ width: "50%" }}>
                         <button
                           className="  btn btn-info w-100"
-                          onClick={() => this.buypet()}
+                          onClick={() => this.buypet(b1)}
                         >
                           Buy
                         </button>

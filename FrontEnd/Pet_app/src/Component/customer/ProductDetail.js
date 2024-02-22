@@ -75,7 +75,7 @@ class ProductDetail extends Component {
                 <figure className="view overlay rounded z-depth-1 main-img">
                   <img
                     src={this.state.product.imgUrl}
-                    style={{ height: "300px", width: "200px" }}
+                    style={{ height: "250px", width: "200px" }}
                     className="img-fluid z-depth-1"
                   ></img>
                 </figure>

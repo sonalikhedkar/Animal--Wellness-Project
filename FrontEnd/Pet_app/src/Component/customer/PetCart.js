@@ -8,7 +8,7 @@ class PetCart extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      cart: [],
+      petcart: [],
       total: 0,
       image: "",
       message: "",
@@ -24,8 +24,8 @@ class PetCart extends Component {
       userDetails = JSON.parse(userDetails);
       console.log("login user id " + userDetails.id);
       ApiService.fetchPetCart(userDetails.id).then((response) => {
-        this.setState({ cart: response.data });
-        console.log("cart data here" + this.state.cart);
+        this.setState({ petcart: response.data });
+        console.log("cart data here" + this.state.petcart);
       });
     } else {
       this.setState({ message: "Please login to view cart details" });
@@ -43,7 +43,7 @@ class PetCart extends Component {
     if (userDetails) {
       userDetails = JSON.parse(userDetails);
 
-      await ApiService.getCartIdOfUser(userDetails.id).then((response) => {
+      await ApiService.getPetCartIdOfUser(userDetails.id).then((response) => {
         this.setState({ CartId: response.data });
       });
       ApiService.deletePetFromCart(this.state.CartId, productId);
@@ -72,9 +72,9 @@ class PetCart extends Component {
       <div className="d-flex flex-wrap">
         <div className="w-75">
           <h4>
-            <b>Shopping Cart</b>
+            <b>Your Pet shopping Cart</b>
           </h4>
-          {this.state.cart.map((ele) => (
+          {this.state.petcart.map((ele) => (
             <div className="card">
               <div className="">
                 <div className="cart">
@@ -143,4 +143,4 @@ class PetCart extends Component {
   }
 }
 
-export default Cart;
+export default PetCart;

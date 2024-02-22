@@ -19,8 +19,8 @@ class AddVet extends Component {
       message: "",
       formErrors: {},
     };
-    this.saveProduct = this.saveProduct.bind(this);
-  }
+    this.saveVet = this.saveVet.bind(this);
+   }
   onChange = (e) => this.setState({ [e.target.name]: e.target.value });
 
   onValueChange = (event) =>
@@ -51,10 +51,10 @@ class AddVet extends Component {
     return formIsValid;
   }
 
-  saveProduct = (e) => {
+  saveVet = (e) => {
     e.preventDefault();
     if (this.handleFormValidation()) {
-      let product = {
+      let vet = {
         clinicname: this.state.clinicname,
         docname: this.state.docname,
         opentime: this.state.opentime,
@@ -67,7 +67,7 @@ class AddVet extends Component {
         
       };
 
-      ApiService.addVet(product)
+      ApiService.addVet(vet)
         .then((resp) => {
           this.setState({ message: "Vet added successfully." });
           this.setState({
@@ -106,7 +106,7 @@ class AddVet extends Component {
           className="bg-white m-4 p-4 border "
           style={{
             
-            height: "700px",
+            height: "800px",
             width: "550px",
             boxShadow:
               " 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.404)",

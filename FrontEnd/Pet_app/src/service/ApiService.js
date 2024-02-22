@@ -19,7 +19,7 @@ class ApiService {
     return axios.get(USER_API_BASE_URL + "/vet/vets");
   }
   fetchTrainers(){
-    return axios.get(USER_API_BASE_URL + "/trainers");
+    return axios.get(USER_API_BASE_URL + "/trainer/trainers/");
   }
 
   fetchProductById(productId) {
@@ -127,15 +127,21 @@ class ApiService {
     return axios.get(USER_API_BASE_URL + "/breed/breeds");
   }
 
-  buypet(cartData) {
-    return axios.post(USER_API_BASE_URL + "/cart/add-pet", cartData);
+  addPetToCardAPI(cartData) {
+    return axios.post(USER_API_BASE_URL + "/petcart/add-pet", cartData);
   }
 
   fetchPetCart(customerId) {
-    return axios.get(USER_API_BASE_URL + "/cart/pets/" + customerId);
+    return axios.get(USER_API_BASE_URL + "/petcart/pets/" + customerId);
   }
-  
+  //getPetCartIdOfUser
+  getPetCartIdOfUser(customerId) {
+    return axios.get(USER_API_BASE_URL + "/petcart/user-cart/" + customerId);
+  }
 
+  
+  
+  
 }
 
 export default new ApiService();
